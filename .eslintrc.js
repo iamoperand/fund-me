@@ -19,4 +19,12 @@ module.exports = {
       globals: { task: true },
     },
   ],
+  rules: {
+    "node/no-unpublished-require": [
+      "error",
+      {
+        allowModules: ["hardhat"],
+      },
+    ],
+  },
 }
