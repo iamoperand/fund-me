@@ -46,7 +46,7 @@ contract FundMe {
   function fund() public payable {
     require(
       msg.value.getConversionRate(priceFeed) >= MINIMUM_USD,
-      "Not enough funds spent!"
+      "You need to spend more ETH!"
     );
     addressToAmountFunded[msg.sender] += msg.value;
     funders.push(msg.sender);
