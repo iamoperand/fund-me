@@ -44,7 +44,10 @@ module.exports = {
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
+    outputFile: "gas-report.txt",
+    noColors: true,
     currency: "USD",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY || "",
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
